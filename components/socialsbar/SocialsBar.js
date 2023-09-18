@@ -6,21 +6,21 @@ function SocialsBar() {
   return (
     <section className={Styles.socialsBar}>
       <a
-        href="https://www.instagram.com/phscomputerteam/"
+        href="https://www.instagram.com/stempotd/"
         target="_blank"
         rel="noreferrer"
       >
         <FaInstagram className={Styles.socialsBarIcons} size={ICON_SIZE} />
       </a>
       <a 
-        href="https://github.com/phscomputerteam" 
+        href="https://github.com/stempotd" 
         target="_blank" 
         rel="noreferrer"
       >
         <FaGithub className={Styles.socialsBarIcons} size={ICON_SIZE} />
       </a>
       <a
-        href="mailto:contact@phscomputerteam.org"
+        href="mailto:contact@stempotd.org"
         target="_blank"
         rel="noreferrer"
       >
