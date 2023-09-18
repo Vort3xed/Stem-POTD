@@ -2,10 +2,11 @@ import { useEffect } from 'react';
 import jQuery from 'jquery';
 import Head from 'next/head';
 import { BsChevronRight } from 'react-icons/bs';
+import Image from 'next/image';
 import Screen from '../components/screen/Screen';
 import options from '../lib/data/FaqData';
 import styles from '../styles/faq.module.css';
-import Image from 'next/image';
+
 
 function FAQs() {
   useEffect(() => {
@@ -60,8 +61,7 @@ function FAQs() {
             src="/betterblueblob.png"
             alt="test"
           />
-        </div>
-        <div className="relative z-20">
+          {/* eslint-disable-next-line */}
         </div>
       </div>
 

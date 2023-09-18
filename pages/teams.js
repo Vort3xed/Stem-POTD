@@ -1,9 +1,9 @@
 import Head from 'next/head';
+import StyledTextV2Small from '@/components/StyledTextV2Small/StyledTextV2';
 import Screen from '../components/screen/Screen';
 import TeamCard from '../components/teams/TeamCard';
 import Styles from '../components/teams/Team.module.css';
 import { Leads } from '../lib/data/TeamData';
-import StyledTextV2Small from '@/components/StyledTextV2Small/StyledTextV2';
 
 function Teams() {
   return (

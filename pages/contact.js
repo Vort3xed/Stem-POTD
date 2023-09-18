@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Screen from '../components/screen/Screen';
 import StyledTextV2Small from '@/components/StyledTextV2Small/StyledTextV2';
+import Screen from '../components/screen/Screen';
 
 
 function ContactUs() {

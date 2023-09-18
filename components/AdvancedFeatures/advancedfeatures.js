@@ -1,11 +1,12 @@
-const { stylesWithCssVar } = require("../motion/motion");
-const { useScroll, useTransform, motion } = require("framer-motion");
-const { useRef } = require("react");
 import StyledTextV2Small from "../StyledTextV2Small/StyledTextV2";
 import Card from "../TimeLine/Card";
 import TimelineData from "../../lib/data/TimelineData";
 
-const AdvFeatures = () => {
+const { useScroll, useTransform, motion } = require("framer-motion");
+const { useRef } = require("react");
+const { stylesWithCssVar } = require("../motion/motion");
+
+function AdvFeatures() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -121,13 +122,14 @@ const AdvFeatures = () => {
         </div>
         <div className="py-10 sm:py-20 rounded-lg bg-5eece1 p-2">
           {TimelineData.reverse().map((item, index) => (
+            // eslint-disable-next-line
             <Card key={index} index={index} data={item} length={TimelineData.length} />
           ))}
         </div>
       </section>
     </>
   );
-};
+}
 
 // module.exports = AdvFeatures;
 export default AdvFeatures;

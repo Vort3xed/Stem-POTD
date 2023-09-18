@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
-import ButtonV2 from '../buttonv2/ButtonV2';
-import BottomGlitter from '../StyledText/BottomGlitter';
-import styles from './home-about.module.css';
 import Image from 'next/image';
+import ButtonV2 from '../buttonv2/ButtonV2';
+import styles from './home-about.module.css';
 import StyledTextV2Small from '../StyledTextV2Small/StyledTextV2';
 
 function HomeAbout() {

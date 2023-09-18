@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Screen from '../components/screen/Screen';
 import AdvFeatures from '@/components/AdvancedFeatures/advancedfeatures';
+import Screen from '../components/screen/Screen';
 
 function Satellite() {
   return (

@@ -1,6 +1,6 @@
-const { stylesWithCssVar } = require("../motion/motion");
 const { motion, useScroll, useTransform } = require("framer-motion");
 const { useRef } = require("react");
+const { stylesWithCssVar } = require("../motion/motion");
 
 function BigReveal() {
   const targetRef = useRef(null);
@@ -76,9 +76,7 @@ function BigReveal() {
             x: "-50%",
           }}
           className="absolute left-1/2 top-1/2 text-[8.8rem] leading-tight text-white"
-        >
-          
-        </motion.p>
+         />
         
         <span className="absolute left-[calc(50%*var(--scale)+50%)] top-0 z-10 h-full w-[50vw] origin-left scale-[var(--scale)] bg-background opacity-[var(--opacity-border)]" />
         <span className="absolute left-[calc(50%*var(--scale)+50%-(2.5rem*var(--scale)))] top-0 z-[12] h-full w-[50vw] origin-left scale-[var(--scale)] border-l-[2.5rem] border-[#64CCC5] opacity-[var(--opacity-border)]" />

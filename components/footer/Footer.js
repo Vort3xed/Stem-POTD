@@ -1,7 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import StyledTextV2Small from '../StyledTextV2Small/StyledTextV2';
 import Styles from './Footer.module.css';
-import Image from 'next/image';
 
 function Footer() {
   return (

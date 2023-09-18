@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Slide = ({ children, direction }) => {
+function Slide({ children, direction }) {
   useEffect(() => {
     AOS.init({
       once: false,
@@ -16,7 +16,7 @@ const Slide = ({ children, direction }) => {
       {children}
     </div>
   );
-};
+}
 
 export default Slide;
 

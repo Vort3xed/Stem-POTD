@@ -81,6 +81,7 @@ function Events() {
   );
 }
 
+// eslint-disable-next-line
 function EventBox({ title, description, src, link, id }) {
   return (
     <div className="contents lg:grid lg:gap-8 lg:justify-items-center">

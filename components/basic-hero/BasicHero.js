@@ -1,8 +1,8 @@
+import Image from 'next/image'
 import styles from './basic-hero.module.css'
 import ButtonV2 from '../buttonv2/ButtonV2'
 import StyledTextV2 from '../StyledTextV2/StyledTextV2'
 import SlidingComponent from '../SlidingComponent/Slider'
-import Image from 'next/image'
 
 export default function BasicHero() {
     return (
@@ -22,7 +22,7 @@ export default function BasicHero() {
                     <StyledTextV2 text="Stem POTD" />
                 </div>
                 <div className="max-w-3xl mx-auto">
-                    <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="300">Poolesville's Olympiad Program?</p>
+                    <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="300">Poolesville&apos;s Olympiad Program?</p>
                     <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="600">
                         <ButtonV2>
                             <span className="flex items-center"> About Us </span>
@@ -39,8 +39,7 @@ export default function BasicHero() {
         </div>
         
         <SlidingComponent direction="right">
-                    <div className="flex flex-col items-center justify-center">
-                    </div>
+                    <div className="flex flex-col items-center justify-center" />
         </SlidingComponent>
 
 

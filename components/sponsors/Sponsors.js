@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import SponsorsData from '../../lib/data/SponsorsData';
 import Styles from './sponsors.module.css';
 import StyledTextV2Small from '../StyledTextV2Small/StyledTextV2';
-import Image from 'next/image';
 
 function Sponsors() {
   const ref = useRef();

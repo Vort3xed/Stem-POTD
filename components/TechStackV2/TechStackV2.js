@@ -1,10 +1,8 @@
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import Styles from './tech-stack.module.css';
 import StyledTextV2Small from '../StyledTextV2Small/StyledTextV2';
-import BottomGlitter from '../StyledText/BottomGlitter';
 import SlidingComponent from '../SlidingComponent/Slider'
-import GridImage from '../gridGallery/GridImage';
-import Image from 'next/image';
 
 
 
@@ -154,6 +152,7 @@ function Element2() {
   );
 }
 
+// eslint-disable-next-line
 function Element3() {
   const ref = useRef();
 
@@ -175,32 +174,30 @@ function Element3() {
   return (
     <div ref={ref} className={`${Styles.row} mt-40 fadeonscroll sm:mt-4`}>
       <div className={`${Styles.col} ${Styles.col40}`}>
-        <h2 className={Styles.header}>Code.</h2>
+        <h2 className={Styles.header}>Element 3</h2>
         <img className={`${Styles.headerImage} mt-2 `} src="/gallery/gallery1.jpg" alt="compteam" />
       </div>
       <div className={`${Styles.col} ${Styles.col60}`}>
         <div className={Styles.headDescription}>
-          Now that we&apos;ve given you the skills to succeed, its time for you to show them
-          off and compete in competitions. We offer a variety of competitions for you to
-          compete in.
+          Description
         </div>
         <div className={Styles.contentContainer}>
           <div className={Styles.content}>
-            <h2>CyberPatriot</h2>
+            <h2>Item 1</h2>
             <p>
-              A national cybersecurity competition that teaches students about the basics of cybersecurity and how to protect themselves and others online.
+              Description
             </p>
           </div>
           <div className={Styles.content}>
-            <h2>USACO</h2>
+            <h2>Item 1</h2>
             <p>
-              The USA Computing Olympiad is a national computer science competition that tests students on their ability to solve problems using algorithms and data structures.
+              Description
             </p>
           </div>
           <div className={Styles.content}>
-            <h2>ACSL</h2>
+            <h2>Item 1</h2>
             <p>
-              The American Computer Science League is a national computer science competition that tests students on their ability to solve problems using algorithms and data structures.
+              Description
             </p>
           </div>
         </div>

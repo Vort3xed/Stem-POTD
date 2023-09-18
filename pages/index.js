@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 import Head from 'next/head';
-import HomeAbout from '../components/homeAbout/HomeAbout';
-import Screen from '../components/screen/Screen';
-import Sponsors from '../components/sponsors/Sponsors';
 import BasicHero from '@/components/basic-hero/BasicHero';
 import TechStackV2 from '@/components/TechStackV2/TechStackV2';
 import BigReveal from '@/components/BigReveal/BigReveal';
 import AnimatedScrollButton from '@/components/AnimatedScrollButton';
+import Sponsors from '../components/sponsors/Sponsors';
+import Screen from '../components/screen/Screen';
+import HomeAbout from '../components/homeAbout/HomeAbout';
 
 export default function Home() {
   return (
