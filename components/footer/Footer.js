@@ -1,9 +1,29 @@
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import StyledTextV2Small from '../StyledTextV2Small/StyledTextV2';
 import Styles from './Footer.module.css';
 
 function Footer() {
+  const [isDesktop, setDesktop] = useState(false);
+
+    useEffect(() => {
+      if (window.innerWidth > 1300) {
+        setDesktop(true);
+      } else {
+        setDesktop(false);
+      }
+  
+      const updateMedia = () => {
+        if (window.innerWidth > 1300) {
+          setDesktop(true);
+        } else {
+          setDesktop(false);
+        }
+      };
+      window.addEventListener('resize', updateMedia);
+      return () => window.removeEventListener('resize', updateMedia);
+    }, []);
   return (
     <footer className={`${Styles.footer} container-70`}>
       <StyledTextV2Small text="Get In Touch" />
@@ -65,15 +85,19 @@ function Footer() {
         <h6 className="flex items-center">
           Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by Agneya Tharun
         </h6>
-        <div className="absolute opacity-70 transform translate-x-2/4 -translate-y-1/4 pointer-events-none" aria-hidden="true">
-          <Image
-            className={Styles.blobImage}
-            height="1000%"
-            width="1000%"
-            src="/betterblueblob.png"
-            alt="test"
-          />
-        </div>
+        {isDesktop ? (
+          <div className="absolute opacity-70 transform translate-x-2/4 -translate-y-1/4 pointer-events-none" aria-hidden="true">
+            <Image
+              className={Styles.blobImage}
+              height="1000%"
+              width="1000%"
+              src="/betterblueblob.png"
+              alt="test"
+            />
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
     </footer>
   );

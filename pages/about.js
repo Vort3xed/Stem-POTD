@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import StyledTextV2Small from '@/components/StyledTextV2Small/StyledTextV2';
 import BasicGridImages from '@/components/gridGallery/BasicGridImages';
@@ -6,6 +7,26 @@ import Screen from '../components/screen/Screen';
 import styles from './blob.module.css'
 
 function About() {
+  const [isDesktop, setDesktop] = useState(false);
+
+    useEffect(() => {
+      if (window.innerWidth > 1300) {
+        setDesktop(true);
+      } else {
+        setDesktop(false);
+      }
+  
+      const updateMedia = () => {
+        if (window.innerWidth > 1300) {
+          setDesktop(true);
+        } else {
+          setDesktop(false);
+        }
+      };
+      window.addEventListener('resize', updateMedia);
+      return () => window.removeEventListener('resize', updateMedia);
+    }, []);
+  
   return (
     <Screen>
       
@@ -50,15 +71,19 @@ function About() {
             </p>
           </div>
         </div>
-        <div className="absolute opacity-70 transform translate-x-1/4 -translate-y-1/4 pointer-events-none" aria-hidden="true">
-                    <Image 
-                    className={styles.blobImage}
-                    height="10000%"
-                    width="10000%"
-                    src="/betterblueblob.png"
-                    alt="test"
-                    />
-                </div>
+        { isDesktop ? (
+          <div className="absolute opacity-70 transform translate-x-1/4 -translate-y-1/4 pointer-events-none" aria-hidden="true">
+              <Image 
+              className={styles.blobImage}
+              height="10000%"
+              width="10000%"
+              src="/betterblueblob.png"
+              alt="test"
+              />
+          </div>
+          ) : (
+            <div></div>
+          )}
             <div className='relative z-10'>
         <BasicGridImages />
         </div>

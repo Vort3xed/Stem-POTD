@@ -21,9 +21,7 @@ function Screen({ children }) {
   return (
     <main id="overlayScreen" className="h-full relative">
       <div className="cursor" />
-      {/* <Navbar /> */}
       <Navbar2 />
-      {/* <NavBar3/> */}
       <SocialsBar />
       {children}
       <Footer />

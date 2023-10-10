@@ -32,7 +32,7 @@ function Teams() {
                 name={item.name}
                 title={item.title}
                 imageSrc={`/teams/${item.imageSrc}`}
-                lazyImageSrc={`/teams/2k19/${item.imageSrc}`}
+                lazyImageSrc={`/teams/${item.imageSrc}`}
                 socials={item.socials}
               />
             );

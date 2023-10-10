@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Styles from './tech-stack.module.css';
 import StyledTextV2Small from '../StyledTextV2Small/StyledTextV2';
@@ -13,6 +13,7 @@ function TechStack() {
         <Element1 />
         <Element2 />
         {/* <Element3 /> */}
+        <Element4 />
       </div>
     </section>
   );
@@ -45,16 +46,15 @@ function Element1() {
       <div className={`${Styles.col} ${Styles.col40}`}>
         {/* <h2 className={`${Styles.header} `}>Explore.</h2> */}
         <div className={`${Styles.header} `}>
-          <StyledTextV2Small text="Magnet3 Sat" />
+          <StyledTextV2Small text="RF Instrument Team" />
         </div>
       </div>
       <div className={`${Styles.col} ${Styles.col60} `}>
-        <SlidingComponent direction="left">
+        {/* <SlidingComponent direction="left"> */}
           <div className={Styles.headDescription}>
-            Not only do we make impacts on earth, we also make impacts in space. We are currently working on a satellite
-            that will be launched into space to collect data on the Earth&apos;s atmosphere.
+            This subteam of the satellite project is responsible for the design and implementation of the radio frequency (RF) instrument on the satellite.
           </div>
-        </SlidingComponent>
+        {/* </SlidingComponent> */}
 
         <div className={Styles.contentContainer}>
           <div className={Styles.newContent}>
@@ -72,7 +72,7 @@ function Element1() {
           <div className={Styles.content} data-aos="zoom-y-out" data-aos-delay="500">
             <h2>Devise.</h2>
             <p>
-              Develop and design our satellite. Use math and physics and apply engineering skills to prototype the design.
+              Develop a radio frequency instrument that can be used to communicate with the satellite.
             </p>
           </div>
 
@@ -88,9 +88,9 @@ function Element1() {
           </div>
           <div className='relative z-10'>
             <div className={Styles.content} data-aos="zoom-y-out" data-aos-delay="600">
-              <h2>Launch.</h2>
+              <h2>Test.</h2>
               <p>
-                A Coalition of female students who are passionate about computer science and want to share their knowledge with others.
+                Run low orbit tests to ensure the instrument is working properly.
               </p>
             </div>
           </div>
@@ -120,32 +120,193 @@ function Element2() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [isDesktop, setDesktop] = useState(false);
+
+    useEffect(() => {
+      if (window.innerWidth > 1300) {
+        setDesktop(true);
+      } else {
+        setDesktop(false);
+      }
+  
+      const updateMedia = () => {
+        if (window.innerWidth > 1300) {
+          setDesktop(true);
+        } else {
+          setDesktop(false);
+        }
+      };
+      window.addEventListener('resize', updateMedia);
+      return () => window.removeEventListener('resize', updateMedia);
+    }, []);
+
   return (
-    <div ref={ref} className={`${Styles.row} mt-40 fadeonscroll sm:mt-4`}>
-      <div className={`${Styles.col} ${Styles.col60}`}>
-        <SlidingComponent direction="right">
-          <div className={Styles.headDescription}>
-            Find resources for the USABO olympiad. We offer a variety of resources to help you succeed.
+    <div>
+      { isDesktop ? (
+        <div ref={ref} className={`${Styles.row} mt-40 fadeonscroll sm:mt-4`}>
+        <div className={`${Styles.col} ${Styles.col60}`}>
+          {/* <SlidingComponent direction="right"> */}
+            <div className={Styles.headDescription}>
+              The second subteam of the satellite project is responsible for the design and implementation of the instrument that records airglow and atmospheric data.
+            </div>
+          {/* </SlidingComponent> */}
+          <div className={Styles.contentContainer}>
+            <div className={Styles.content} data-aos="zoom-y-out" data-aos-delay="500">
+              <h2>Simulate.</h2>
+              <p>
+                Run simulations to determine the best way to collect data.
+              </p>
+            </div>
+            <div className={Styles.content} data-aos="zoom-y-out" data-aos-delay="600">
+              <h2>Solve.</h2>
+              <p>
+                Use advanced mathematics to interpret the data collected.
+              </p>
+            </div>
           </div>
-        </SlidingComponent>
-        <div className={Styles.contentContainer}>
-          <div className={Styles.content} data-aos="zoom-y-out" data-aos-delay="500">
-            <h2>Resources</h2>
-            <p>
-              Check out our resources to help you succeed in the USABO olympiad.
-            </p>
-          </div>
-          <div className={Styles.content} data-aos="zoom-y-out" data-aos-delay="600">
-            <h2>Join</h2>
-            <p>
-              Join the team and help develop resources for the USABO olympiad.
-            </p>
+        </div>
+        <div className={`${Styles.col} ${Styles.col40}`}>
+          <div className={`${Styles.header} `}>
+            <StyledTextV2Small text="Optics Team" />
           </div>
         </div>
       </div>
+      ) : (
+        <div ref={ref} className={`${Styles.row} mt-40 fadeonscroll`}>
       <div className={`${Styles.col} ${Styles.col40}`}>
+        {/* <h2 className={`${Styles.header} `}>Explore.</h2> */}
         <div className={`${Styles.header} `}>
-          <StyledTextV2Small text="Biology Olympiad" />
+          <StyledTextV2Small text="Optics Team" />
+        </div>
+      </div>
+      <div className={`${Styles.col} ${Styles.col60} `}>
+        {/* <SlidingComponent direction="left"> */}
+          <div className={Styles.headDescription}>
+          The second subteam of the satellite project is responsible for the design and implementation of the instrument that records airglow and atmospheric data.
+          </div>
+        {/* </SlidingComponent> */}
+
+        <div className={Styles.contentContainer}>
+          <div className={Styles.newContent}>
+            <div className={`${Styles.content}`}>
+              {/* <GridImage
+              key="1"
+              src="/gallery/gallery1.jpg"
+              mobileSrc="/gallery/gallery1.jpg"
+              title=""
+              id="1"
+            /> */}
+              <img className={`${Styles.headerImage} mt-2 `} src="/gallery/gallery1.jpg" alt="compteam" />
+            </div>
+          </div>
+          <div className={Styles.content} data-aos="zoom-y-out" data-aos-delay="500">
+            <h2>Simulate.</h2>
+            <p>
+            Run simulations to determine the best way to collect data.
+            </p>
+          </div>
+
+          <div className="absolute opacity-100 transform -translate-x-1/4 translate-y-1/4 pointer-events-none" aria-hidden="true">
+            <Image
+              className={Styles.blobImage}
+              height="10000%"
+              width="10000%"
+              // src="/blob.png"
+              src="/betterblueblob.png"
+              alt="test"
+            />
+          </div>
+          <div className='relative z-10'>
+            <div className={Styles.content} data-aos="zoom-y-out" data-aos-delay="600">
+              <h2>Solve.</h2>
+              <p>
+              Use advanced mathematics to interpret the data collected.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+      )}
+    </div>
+  );
+}
+
+function Element4() {
+  const ref = useRef();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (ref.current) {
+        if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
+          ref.current.classList.add('active');
+        } else {
+          ref.current.classList.remove('active');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+
+    <div ref={ref} className={`${Styles.row} mt-40 fadeonscroll`}>
+      <div className={`${Styles.col} ${Styles.col40}`}>
+        {/* <h2 className={`${Styles.header} `}>Explore.</h2> */}
+        <div className={`${Styles.header} `}>
+          <StyledTextV2Small text="Engineering Team" />
+        </div>
+      </div>
+      <div className={`${Styles.col} ${Styles.col60} `}>
+        {/* <SlidingComponent direction="left"> */}
+          <div className={Styles.headDescription}>
+            Assemble parts of the satellite and use CAD software to design the satellite.
+          </div>
+        {/* </SlidingComponent> */}
+
+        <div className={Styles.contentContainer}>
+          <div className={Styles.newContent}>
+            <div className={`${Styles.content}`}>
+              {/* <GridImage
+              key="1"
+              src="/gallery/gallery1.jpg"
+              mobileSrc="/gallery/gallery1.jpg"
+              title=""
+              id="1"
+            /> */}
+              <img className={`${Styles.headerImage} mt-2 `} src="/gallery/gallery1.jpg" alt="compteam" />
+            </div>
+          </div>
+          <div className={Styles.content} data-aos="zoom-y-out" data-aos-delay="500">
+            <h2>Learn.</h2>
+            <p>
+              Develop a radio frequency instrument that can be used to communicate with the satellite.
+            </p>
+          </div>
+
+          <div className="absolute opacity-100 transform -translate-x-1/4 translate-y-1/4 pointer-events-none" aria-hidden="true">
+            <Image
+              className={Styles.blobImage}
+              height="10000%"
+              width="10000%"
+              // src="/blob.png"
+              src="/betterblueblob.png"
+              alt="test"
+            />
+          </div>
+          <div className='relative z-10'>
+            <div className={Styles.content} data-aos="zoom-y-out" data-aos-delay="600">
+              <h2>Test.</h2>
+              <p>
+                Run low orbit tests to ensure the instrument is working properly.
+              </p>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>

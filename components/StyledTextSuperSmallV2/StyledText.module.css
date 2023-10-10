@@ -13,7 +13,7 @@
   --color-two: hsl(219, 69%, 43%);
   /* font-size: clamp(4rem, 30vmin, 9rem); */
   /* font-size: clamp(2rem, 20vmin, 6rem); */
-  font-size: calc(.8em + 1vw);
+  font-size: calc(1em + 4vw);
   /* font-weight: bold; */
   background: linear-gradient(
     90deg,

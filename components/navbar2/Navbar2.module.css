@@ -4,7 +4,8 @@
   @apply xl:px-8;
   @apply sm:px-6;
   @apply xs:px-3;
-  background-color: #176B87;
+  /* background-color: #176B87; */
+  backdrop-filter: blur(8px);
   /* background-image: linear-gradient(to top left,hsl(180, 90%, 55%),hsl(219, 69%, 43%)); */
 }
 

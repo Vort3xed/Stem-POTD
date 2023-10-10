@@ -11,7 +11,7 @@ function BigReveal() {
   const textX = useTransform(
     scrollYProgress, 
     [0.1, 0.7], 
-    ["100%", "-100%"]
+    ["100%", "-120%"]
   );
   const opacitySection = useTransform(
     scrollYProgress,
