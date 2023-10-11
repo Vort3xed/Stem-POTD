@@ -2,9 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Styles from './tech-stack.module.css';
 import StyledTextV2Small from '../StyledTextV2Small/StyledTextV2';
-import SlidingComponent from '../SlidingComponent/Slider'
-
-
 
 function TechStack() {
   return (

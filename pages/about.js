@@ -82,11 +82,12 @@ function About() {
               />
           </div>
           ) : (
-            <div></div>
+            <div/>
           )}
+          
             <div className='relative z-10'>
-        <BasicGridImages />
-        </div>
+              <BasicGridImages />
+            </div>
       </section>
     </Screen>
   );

@@ -9,6 +9,7 @@
   ],
 
   "rules": {
+    "react/self-closing-comp": "off",
     "react/no-danger": "off",
     "react/react-in-jsx-scope": "off",
     "no-console": "error",

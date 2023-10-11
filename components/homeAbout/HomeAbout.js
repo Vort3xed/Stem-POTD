@@ -45,7 +45,7 @@ function HomeAbout() {
       <StyledTextV2Small text="About Us"/>
       <div className="my-6 py-2">
         <p className="text-xl w-10/12 md:w-full md:text-lg sm:text-base">
-          Stem POTD is an organization that handles Poolesville's cubesat program. We let students gain research experience by giving them first hand experience in building a nanosat.
+          Stem POTD is an organization that handles Poolesville&apos;s cubesat program. We let students gain research experience by giving them first hand experience in building a nanosat.
         </p>
       </div>
       
