@@ -57,8 +57,7 @@ function About() {
                 </div>
             <div className='relative z-10'>
             <p className="text-lg">
-              Stem-POTD is a program to help students train for under-represented olympiads. We also let students gain research experience by letting them work on our big projects, 
-              such as the satellite project.
+              Stem-POTD is a program to overshadow the satellite project taking place at Poolesville High School.
             </p>
             </div>
           </div>
@@ -67,7 +66,7 @@ function About() {
           <StyledTextV2Small text="Operation"/>
           <div className="mt-6">
             <p className="text-lg">
-              We hold meetings every week to continue working on the satellite project. We also hold meetings to create and upload content for olympiad preperation.
+              We hold meetings every friday either online or at the Rockville Library. 
             </p>
           </div>
         </div>
